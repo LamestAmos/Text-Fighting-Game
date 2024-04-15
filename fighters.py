@@ -8,7 +8,7 @@ class Fighter:
         self.defense = 15 * (.1 * lvl)
         self.attack = 20 * (.1 * lvl)
         self.opponent = opponent
-        self.order = 0
+        self.order = 1
 
     def block(self):
         print("Block")
