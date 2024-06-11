@@ -1,9 +1,9 @@
 import random
 
 class Fighter:
-    def __init__(self, lvl,opponent):
+    def __init__(self, lvl,opponent) -> None:
         self.lvl = lvl
-        self.hp = 30 * (.1 * lvl)
+        self.hp = random.randint(25,30) * (.1  * lvl)
         self.speed = 10 * (.1 * lvl)
         self.defense = 15 * (.1 * lvl)
         self.attack = 20 * (.1 * lvl)
@@ -15,10 +15,9 @@ class Fighter:
 
     def dodge(self):
         print("Dodge")
-
-
+    
 class Player(Fighter):
-    def __init__(self,lvl,opponent=None):
+    def __init__(self,lvl,opponent=None) -> None:
         super().__init__(lvl,opponent)
 
     def do(self):
@@ -32,7 +31,7 @@ class Player(Fighter):
         print("Train")
 
 class Enemy(Fighter):
-    def __init__(self, lvl,opponent=None):
+    def __init__(self, lvl,opponent=None) -> None:
         super().__init__(lvl,opponent)
 
     def fight(self):
