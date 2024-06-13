@@ -20,7 +20,7 @@ class Player(Fighter):
     def __init__(self,lvl,opponent=None) -> None:
         super().__init__(lvl,opponent)
 
-    def do(self):
+    def do(self) -> str:
         return input('What do you want to do: ')
 
     def find(self):

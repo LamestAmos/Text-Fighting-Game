@@ -11,7 +11,6 @@ player.opponent = enemy
 player_health_bar = HEALTH_BAR*int(player.hp)
 enemy_health_bar = HEALTH_BAR*int(enemy.hp)
 
-
 def init() -> None:
     while True:
         player_decision: str = player.do()
@@ -19,6 +18,7 @@ def init() -> None:
         # print(enemy_health_bar)
 
         if player_decision.lower() == "rest":
+            print("Time to rest for a while....")
             break
 
 init()
