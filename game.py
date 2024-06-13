@@ -13,9 +13,13 @@ enemy_health_bar = HEALTH_BAR*int(enemy.hp)
 
 
 def init() -> None:
-    # player.do()
-    print(player_health_bar)
-    print(enemy_health_bar)
+    while True:
+        player_decision: str = player.do()
+        # print(player_health_bar)
+        # print(enemy_health_bar)
+
+        if player_decision.lower() == "rest":
+            break
 
 init()
 
