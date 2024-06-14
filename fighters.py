@@ -10,10 +10,10 @@ class Fighter:
         self.opponent = opponent
         self.order = 1
 
-    def block(self):
+    def block(self) -> None:
         print("Block")
 
-    def dodge(self):
+    def dodge(self) -> None:
         print("Dodge")
     
 class Player(Fighter):
@@ -23,17 +23,17 @@ class Player(Fighter):
     def do(self) -> str:
         return input('What do you want to do: ')
 
-    def find(self):
+    def find(self) -> None:
         print("Time to find a worthy battle")
         self.opponent.fight()
 
-    def train(self):
+    def train(self) -> None:
         print("Train")
 
 class Enemy(Fighter):
     def __init__(self, lvl,opponent=None) -> None:
         super().__init__(lvl,opponent)
 
-    def fight(self):
+    def fight(self) -> None:
         print("Fight")
 

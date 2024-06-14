@@ -8,16 +8,16 @@ enemy: Enemy = Enemy(1)
 enemy.opponent = player
 player.opponent = enemy
 
-player_health_bar = HEALTH_BAR*int(player.hp)
-enemy_health_bar = HEALTH_BAR*int(enemy.hp)
+player_health_bar: str = HEALTH_BAR*int(player.hp)
+enemy_health_bar: str = HEALTH_BAR*int(enemy.hp)
 
 def init() -> None:
     while True:
-        player_decision: str = player.do()
+        player_decision: str = player.do().lower()
         # print(player_health_bar)
         # print(enemy_health_bar)
 
-        if player_decision.lower() == "rest":
+        if player_decision == "rest":
             print("Time to rest for a while....")
             break
 
