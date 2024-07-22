@@ -29,7 +29,9 @@ class Player(Fighter):
 
     def train(self) -> None:
         print("Train")
-
+    
+    def rest(self) -> None:
+        print("Time to rest for a while....")
 class Enemy(Fighter):
     def __init__(self, lvl,opponent=None) -> None:
         super().__init__(lvl,opponent)
@@ -37,3 +39,5 @@ class Enemy(Fighter):
     def fight(self) -> None:
         print("Fight")
 
+if __name__ == "__main__":
+    print("This is the fighters file")

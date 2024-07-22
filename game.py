@@ -16,9 +16,14 @@ def init() -> None:
         player_decision: str = player.do().lower()
         # print(player_health_bar)
         # print(enemy_health_bar)
+        if player_decision == "find":
+            player.find()
+
+        if player_decision == "train":
+            player.train()
 
         if player_decision == "rest":
-            print("Time to rest for a while....")
+            player.rest()
             break
 
 init()
